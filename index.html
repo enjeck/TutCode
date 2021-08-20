@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TutCode - Learn and code in one place</title>
+    <meta charset="UTF-8" />
+    <link href="src/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://prismjs.com/themes/prism.css">
+  <link rel="stylesheet" href="https://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
+  <link rel="stylesheet" href="src/css/prism-live.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <!--using FontAwesome-->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script>
+        function openTab(e, tabName) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+  
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length-1; i++) {
+            tabcontent[i].style.display = "none";
+          }
+  
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length-1; i++) {
+            tablinks[i].className = tablinks[i].className.replace("tab-active", "");
+          }
+  
+          // Show the current tab, and add a "tab-active" class to the button that opened the tab
+          document.getElementById(tabName).style.display = "block";
+          document.getElementById(tabName).className += " tab-active";
+        }
+        document.getElementById("defaultTab").click();
+      </script>
+
+    </body>
+  </head>
+
+  <body>
+    <div id="top-menu"> 
+      <div id="logo">
+        TUTCODE
+      </div>
+      <div>
+      <button type="button" id="new-project" class="menu-btn">
+          <i class="fa fa-plus"></i> 
+          New
+        </button>
+        <button type="button" id="download-project" class="menu-btn">
+            <i class="fa fa-download"></i> 
+            Download
+          </button>
+      </div>
+      <div >
+          <a href="" class="github-link"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div id="main">
+      <div id="left">
+        <div id="lesson">
+          <div class="collapsible">
+            <button
+              type="button"
+              id="collapsible"
+              class="bar-btn collapsible-text"
+            >
+            <i class="fa fa-caret-down"></i> Tutorial
+            </button>
+            <button type="button" id="add-link" class="bar-btn add-link">
+                <i class="fa fa-link"></i> 
+            </button>
+          </div>
+          <!-- Section to website or youtube video link-->
+          <div id="enter-link">
+            <h4> Tutorial Setting </h4>
+            <div>
+              <p> Enter a link to a youtube video or tutorial article </p>
+              <textarea id="link-box">https://www.youtube.com/watch?v=cwC1qdPWBKo</textarea>
+              <button id="link-done"> Done </button>
+            </div>
+          </div>
+          <div id="embed">
+             <div id="embed-prompt" class="embed-option embed-active">
+               Enter a video or tutorial article url
+             </div>
+              <iframe id="embed-content" class="embed-option"
+              src="about:blank">
+              </iframe> 
+          </div>
+        </div>
+
+<!-- Code editors -->
+        <div id="code-tabs">
+          <div class="tab" id="tabs">
+            <button
+              class="tablinks tab-active"
+              onclick="openTab(event, 'html')"
+              id="defaultTab"
+            >
+              HTML
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'css')">
+              CSS
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'javascript')">
+              JavaScript
+            </button>
+            <button class="tablinks" id="run"> 
+                <i class="fa fa-play"></i> 
+             </button>
+          </div>
+          <!-- Code area -->
+          <div id="html" class="tabcontent" style="display:block;">
+              <textarea  class="prism-live language-html" id="html-editor" class="editor">
+<!--HTML seed code -->
+<div class="card">
+    <div class="card-image"></div>
+    <div class="card-text">
+      <span class="date">4 days ago</span>
+      <h2>Post One</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+    </div>
+    <div class="card-stats">
+      <div class="stat">
+        <div class="value">4<sup>m</sup></div>
+        <div class="type">read</div>
+      </div>
+      <div class="stat border">
+        <div class="value">5123</div>
+        <div class="type">views</div>
+      </div>
+      <div class="stat">
+        <div class="value">32</div>
+        <div class="type">comments</div>
+      </div>
+    </div>
+  </div>
+              </textarea>
+          </div>
+
+          <div id="css" class="tabcontent">
+              <textarea class="prism-live language-css" id="css-editor" class="editor"> 
+/* CSS seed code */
+.card {
+  display: grid;
+  width: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+  margin: auto;
+  margin-top: 20%;
+}
+
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+}
+.card-stats {
+  grid-area: stats; 
+}
+
+.card-image {
+  grid-area: image;
+  background: url("https://i.stack.imgur.com/y9DpT.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size:13px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding:10px;
+}
+              </textarea>
+          </div>
+
+          <div id="javascript" class="tabcontent">
+              <textarea id=js-editor class="editor prism-live language-js"> 
+// JavaScript code here 
+              </textarea>
+          </div>
+        </div>
+      </div>
+
+      <div id="right">
+      <!-- Rendered code is shown here -->
+        <div id="renderer">
+          <div id="render-content">
+            <iframe id="iframe"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!--Using JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+         <!--Using Prism and Prism Live to highlight code in the editors-->
+    <script src="src/js/prism.js"></script>
+    <script src="src/js/prism-live.js?load=css,html,javascript"></script>
+    
+     <script src="src/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+* {
+  transition: 0.4s;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", serif;
+}
+
+/* Top menu */
+#top-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #555;
+  border-bottom: 3px solid #444;
+  color: #eee;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "sans serif";
+}
+.menu-btn {
+  outline: none;
+  background-color: inherit;
+  border: 0;
+  color: #eee;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0 15px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.menu-btn:hover,
+.github-link:hover {
+  color: #3a8df3;
+}
+.menu-btn i {
+  font-size: 12px;
+}
+
+.github-link {
+  color: #eee;
+  font-size: 25px;
+}
+
+/* Collapsible section */
+.collapsible {
+  background-color: #ddd;
+  color: #444;
+  width: 100%;
+  display: flex;
+}
+.bar-btn {
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.collapsible-text {
+  flex: 1;
+}
+.add-link {
+  background: #dddddd;
+  position: relative;
+  color: #000;
+}
+
+.add-link:hover {
+  background: #bbb;
+}
+
+/* Collapsible bar */
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.fa-caret-down {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.collapsible-text {
+  font-weight: bold;
+}
+
+
+#embed {
+  display: block;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+/* Tabs*/
+.tab {
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.tab-active {
+  font-weight: 900;
+  background: #f5f2f0;
+}
+
+.tabcontent {
+  display: none;
+  border-top: none;
+  height: 100%;
+  width: 100%;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s;
+}
+#run {
+  float: right;
+  border-left: 2px solid #aaa;
+  color: #000;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add link area */
+
+#enter-link {
+  background: #bbb;
+  padding: 2%;
+  display: none;
+}
+
+#link-box {
+  width: 98%;
+  position: relative;
+  margin: auto;
+  font-size: 16px;
+}
+
+#link-done {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #333;
+  margin: 10px 0;
+  text-transform: uppercase;
+  color: #eee;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Left side */
+
+#main #left {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+#main #left #lesson {
+  /*overflow-y: scroll;*/
+  background: #f5f5f5;
+  font-family: "sans serif";
+  width: 100%;
+  flex: 1;
+}
+
+/* Embed video */
+#embed {
+  width: 100%;
+  flex: 1;
+  height: 100%;
+}
+
+#embed-prompt {
+  background-color: #666;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 20vh;
+  color: #aaa;
+}
+#embed-content {
+  width: 100%;
+  height: 100%;
+}
+
+.embed-option {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.embed-active {
+  display: block;
+}
+
+#lesson h2 {
+  text-transform: uppercase;
+}
+
+/* Code area */
+
+#main #code-tabs {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.editor {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: 0 !important;
+  overflow-y: scroll;
+  margin: 0;
+  border-left: 0;
+  border-right: 0;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Right side */
+#main #right {
+  width: 50%;
+  height: 100vh;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+
+/* Area where code is rendered */`
+#renderer {
+  width: 100%;
+  height: 93vh;
+  padding: 15px;
+}
+
+#render-content {
+  width: 100%;
+  height: 100%;
+}
+
+#render-content #iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

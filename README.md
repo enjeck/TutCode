@@ -17,4 +17,4 @@ The prism and prism live CSS and JS file are for code highlighting.
     ``` 
     git clone https://github.com/PROTechThor/TutCode.git
     ```
-2. Visit [index.html](index.html) on your preferred Website. 
+2. Visit [index.html](index.html) on your preferred browser. 

@@ -1,7 +1,7 @@
 {
-  "name": "vanilla",
+  "name": "TutCode",
   "version": "1.0.0",
-  "description": "JavaScript example starter project",
+  "description": "A site to learn and code in one environment",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -12,7 +12,6 @@
     "font-awesome": "4.7.0",
     "jquery": "3.6.0",
     "jszip": "3.7.1",
-    "monaco-editor": "0.26.1",
     "parcel-bundler": "^1.6.1"
   },
   "devDependencies": {

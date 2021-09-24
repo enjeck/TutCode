@@ -1,7 +1,11 @@
 # TutCode
-A website where you can read/watch tutorials and write code on the same page. 
+A website where you can read/watch tutorials and write code on the same page. Try it out at https://tutcode.netlify.app/.
+
 All the relevant JavaScript code can be found at [src/index.js](main/src/js/index.js). 
-The prism and prism live CSS and JS file are for code highlighting.
+
+#### Todo
+Initially, Prism Live was used for syntax highlighting, but it was glitchy, so it's been removed. 
+I'll have to find another way to highlight the code. 
 
 ## Screenshots
 #### With Video
@@ -17,4 +21,13 @@ The prism and prism live CSS and JS file are for code highlighting.
     ``` 
     git clone https://github.com/PROTechThor/TutCode.git
     ```
-2. Visit [index.html](index.html) on your preferred browser. 
+2. Enter the directory and install node modules
+    ``` 
+    cd TutCode
+    npm install
+    ```
+3. Access the live server
+    ``` 
+    npm run start
+    ```
+    You should now find the server running at http://localhost:1234 
